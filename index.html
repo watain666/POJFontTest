@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>POJ</title>
+    <link href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN::Navbar -->
+                <div class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                        </button> <a class="navbar-brand" href="index.html">POJ</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Font test</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END::Navbar -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <h2>POJ Font Select</h2>
+                <select class="form-control" onchange="ffchange(this.options[this.selectedIndex].value);">
+                    <option value="" disabled selected hidden>Please select your font</option>
+                    <option value="Taigi Unicode">Taigi Unicode</option>
+                    <option value="Doulos SIL">Doulos SIL</option>
+                    <option value="Gentium">Gentium</option>
+                    <option value="Code2000 Normal">Code2000 Normal</option>
+                    <option value="Arial Unicode MS">Arial Unicode MS</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="Noto Sans CJK SC">Noto Sans CJK SC</option>
+                </select>
+                <h2>POJ Font Size</h2>
+                <select class="form-control" onchange="fzchange(this.options[this.selectedIndex].value);">
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18" selected="selected">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="30">30</option>
+                    <option value="32">32</option>
+                </select>
+            </form>
+            <hr>
+            <div id="poj" style="font-size: 18px;writing-mode: ">
+                <table class="table table-striped table-bordered table-hover table-condensed" contenteditable="true">
+                    <tbody>
+                        <tr><td>2: ́ 3: ̀ 5: ̂ 7: ̄ 8: ̍ 9: ̆</tr></td>
+                        <tr><td>Å å</tr></td>
+                        <tr><td>A Á À Â Ā A̍ Ă a á à â ā a̍ ă</tr></td>
+                        <tr><td>A͘ Á͘ À͘ Â͘ Ā͘ A̍͘ Ă͘ a͘ á͘ à͘ â͘ ā͘ a̍͘ ă͘</tr></td>
+                        <tr><td>D Ḏ ḏ</tr></td>
+                        <tr><td>Đ đ</tr></td>
+                        <tr><td>E É È Ê Ē E̍ Ĕ e é è ê ē e̍ ĕ</tr></td>
+                        <tr><td>E͘ É͘ È͘ Ê͘ Ē͘ E̍͘ Ĕ͘ e͘ é͘ è͘ ê͘ ē͘ e̍͘ ĕ͘</tr></td>
+                        <tr><td>Ï ï</tr></td>
+                        <tr><td>I Í Ì Î Ī I̍ Ĭ i í ì î ī i̍ ĭ</tr></td>
+                        <tr><td>I͘ Í͘ Ì͘ Î͘ Ī͘ I̍͘ Ĭ͘ i͘ í͘ ì͘ î͘ ī͘ i̍͘ ĭ͘</tr></td>
+                        <tr><td>L Ḻ ḻ</tr></td>
+                        <tr><td>M Ḿ M̀ M̂ M̄ M̍ M̆ m ḿ m̀ m̂ m̄ m̍ m̆</tr></td>
+                        <tr><td>N Ń Ǹ N̂ N̄ N̍ N̆ n ń ǹ n̂ n̄ n̍ n̆</tr></td>
+                        <tr><td>ⁿ</tr></td>
+                        <tr><td>O Ó Ò Ô Ō O̍ Ŏ o ó ò ô ō o̍ ŏ</tr></td>
+                        <tr><td>O͘ Ó͘ Ò͘ Ô͘ Ō͘ O̍͘ Ŏ͘ o͘ ó͘ ò͘ ô͘ ō͘ o̍͘ ŏ͘</tr></td>
+                        <tr><td>Ö Ö́ Ö̀ Ö̂ Ȫ Ö̍ Ö̆ ö ö́ ö̀ ö̂ ȫ ö̍ ö̆</tr></td>
+                        <tr><td>R Ṟ ṟ</tr></td>
+                        <tr><td>T Ṯ ṯ</tr></td>
+                        <tr><td>U̶ u̶</tr></td>
+                        <tr><td>Ů ů</tr></td>
+                        <tr><td>U Ú Ù Û Ū U̍ Ŭ u ú ù û ū u̍ ŭ</tr></td>
+                        <tr><td>U͘ Ú͘ Ù͘ Û͘ Ū͘ U̍͘ Ŭ͘ u͘ ú͘ ù͘ û͘ ū͘ u̍͘ ŭ͘</tr></td>
+                        <tr><td>Ṳ Ṳ́ Ṳ̀ Ṳ̂ Ṳ̄ Ṳ̍ ṳ ṳ́ ṳ̀ ṳ̂ ṳ̄ ṳ̍</tr></td>
+                        <tr><td>chhì [O/o + Combining Dot Above Right + tiāuhō]</tr></td>
+                        <tr><td>O͘ Ó͘ Ò͘ Ô͘ Ō͘ O̍͘ Ŏ͘ o͘ ó͘ ò͘ ô͘ ō͘ o̍͘ ŏ͘</tr></td>
+                        <tr><td> chhì [O/o + tiāuhō + Combining Dot Above Right]</tr></td>
+                        <tr><td>O͘ Ó͘ Ò͘ Ô͘ Ō͘ O̍͘ Ŏ͘ o͘ ó͘ ò͘ ô͘ ō͘ o̍͘ ŏ͘</tr></td>
+                        <tr><td>chhì [Dotless i (U+0131)]</tr></td>
+                        <tr><td>ı ı̂ ı̀ ı̂ ı̄ ı̍ ı̆</tr></td>
+                        <tr><td>chhì [khin-siaⁿ (U+00b7)]</tr></td>
+                        <tr><td>Thiaⁿ-·tio̍h ·a.</tr></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+<script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.js"></script>
+<script>
+    function fzchange(size){
+        var chagefz=document.getElementById("poj");
+        chagefz.style.fontSize=Number(size)+ "px" ;
+    }
+    function ffchange(font){
+        var chageff=document.getElementById("poj");
+        chageff.style.fontFamily=font;
+    }
+</script>
+</html>
